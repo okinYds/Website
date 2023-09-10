@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ITWD6</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="CSS/ITWD6.408-theme.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav id="nav" class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="images/global.png" class="d-inline-block align-text-top me-2"
+                    width="30" alt="Logo">ITWD6.408</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Forms.html">Forms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="XML-JSON.html">XML/JSON </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Research.html">Research</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Javascript.html">JavaScript</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+        <section id="as1 forms" class="container-fluid">
+            <div class="row accordion accordion-flush" id="accordionFlushExample">
+                <div class="col-sm-12 col-lg-3">
+                    <div class="row accordion-item">
+                        <div class="col-xm-6 col-sm-6 col-lg-12">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="true"
+                                    aria-controls="flush-collapseOne">
+                                    Demo1
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div class="col-xm-6 col-sm-6 col-lg-12">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    Demo2
+                                </button>
+                            </h2>
+                        </div>
+                        <div class="col-xm-6 col-sm-6 col-lg-12">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">
+                                    Demo3
+                                </button>
+                            </h2>
+                        </div>
+                        <div class="col-xm-6 col-sm-6 col-lg-12">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                    aria-controls="flush-collapseFour">
+                                    Demo4
+                                </button>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-9 col-sm-12">
+                    <div class="accordion-item">
+                        <div id="flush-collapseOne" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="row mb-3">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <!-- Content for Demo 1 -->
+                                        <h2>Slideshow automatic and manual</h2>
+                                        <section class="container">
+                                            <h3>Manual Slideshow: Two buttons</h3>
+                                            <h4 id="manual-slide-title">Samsung Galaxy Tab A7 Lite 8.7 Tablet - Grey
+                                            </h4>
+                                            <img id="manual-slide-image" src="images/TABSAM22011__1.jpeg"
+                                                height="300px">
+                                            <br>
+                                            <button onclick="previousSlide()">PREVIOUS</button>
+                                            <button onclick="nextSlide()">NEXT</button>
+
+                                        </section>
+
+                                        <section class="container">
+                                            <h3>Automatical Slideshow: running automatically</h3>
+                                            <h4 id="auto-slide-title">Samsung Galaxy Tab A7 Lite 8.7 Tablet - Grey</h4>
+                                            <img id="auto-slide-image" src="images/TABSAM22011__1.jpeg" height="300px">
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <!-- DROPDOWN MENU TO SELECT DEVICE -->
+                                <select id="my-deviceList" onchange="displayMyDevice()">
+                                    <!-- Options will be populated by JavaScript -->
+                                </select>
+
+                                <section class="container">
+                                    <h3>Selected Device:</h3>
+                                    <h4 id="my-deviceTitle">Samsung Galaxy Tab A7 Lite 8.7 Tablet - Grey</h4>
+                                    <p>Brand: <span id="my-deviceBrand">Samsung</span></p>
+                                    <p>Brand Name: <span id="my-deviceBrandName">Galaxy Tab A7 Lite</span></p>
+                                    <img id="my-deviceImageURL" src="images/TABSAM22011__1.jpeg" height="300px">
+                                </section>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <!--Exercise 3-->
+                                <h2>Add a new device to the list above</h2>
+                                <section class="container">
+                                    <h4>Add new item (device) to the existing list: </h4>
+                                    <label>Title: </label>
+                                    <input type="text" id="my-device-title" size="70" placeholder="title">
+                                    <br>
+                                    <label>Brand: </label>
+                                    <input type="text" id="my-device-brand" size="70" placeholder="brand">
+                                    <br>
+                                    <label>Brand Name: </label>
+                                    <input type="text" id="my-device-brand-name" size="70" placeholder="brand name">
+                                    <br>
+                                    <label>Image URL: </label>
+                                    <input type="text" id="my-device-image-url" size="70" placeholder="image url">
+                                    <br>
+                                    <input type="button" value="Add To List" onclick="AddItemToList()">
+                                </section>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div id="flush-collapseFour" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <!--Exercise 4-->
+                                <h2>Add a Comment</h2>
+                                <section class="container">
+                                    <h4 id="my-deviceTitle">Samsung Galaxy Tab A7 Lite 8.7 Tablet - Grey</h4>
+                                    <p id="my-deviceBrand">Samsung</p>
+                                    <p id="my-deviceBrandName">Galaxy Tab A7 Lite</p>
+                                    <img id="my-deviceImageURL" src="images/TABSAM22011__1.jpeg" height="300px">
+                                    <br>
+
+                                    <h4>Comments: </h4>
+                                    <div id="comment-list"> </div>
+
+                                    <h4>Add your comment: </h4>
+                                    <label>Name: </label>
+                                    <input type="text" id="comment_name" placeholder="your name" size="90">
+                                    <br>
+                                    <label>Comment: </label><br>
+                                    <textarea id="comment_text" cols="100" rows="10">
+                                     </textarea>
+                                    <br>
+                                    <button onclick="addComment()">POST</button>
+                                </section>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+    <footer class="container-fluid p-2">
+        <div class="row">
+            <div id="social" class="col-sm-12 col-md-4 col-lg-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                <path d="M8 0c2.21 0 2.485.01 3.348.048 1.292.056 2.206.245 3.01.533.752.274 1.362.623 1.962 1.223.6.6.95 1.21 1.223 1.962.288.804.477 1.718.533 3.01.038.863.048 1.138.048 3.348s-.01 2.485-.048 3.348c-.056 1.292-.245 2.206-.533 3.01-.274.752-.623 1.362-1.223 1.962-.6.6-1.21.95-1.962 1.223-.804.288-1.718.477-3.01.533-0.863.038-1.138.048-3.348.048s-2.485-.01-3.348-.048c-1.292-.056-2.206-.245-3.01-.533-.752-.274-1.362-.623-1.962-1.223-.6-.6-.95-1.21-1.223-1.962-.288-.804-.477-1.718-.533-3.01-.038-0.863-.048-1.138-.048-3.348s0.01-2.485.048-3.348c0.056-1.292.245-2.206.533-3.01.274-0.752.623-1.362 1.223-1.962.6-.6 1.21-.95 1.962-1.223.804-.288 1.718-.477 3.01-.533 0.863-.038 1.138-.048 3.348-.048zM8 1.5a6.5 6.5 0 0 0-6.5 6.5c0 1.685.065 2.366.098 3.15.037 1.037.137 1.725.292 2.25.156.532.362.94.65 1.228.288.288.696.494 1.228.65.525.155 1.213.255 2.25.292 0.784.033 1.465.098 3.15.098s2.366-.065 3.15-.098c1.037-.037 1.725-.137 2.25-.292.532-.156.94-.362 1.228-.65.288-.288.494-.696.65-1.228.155-.525.255-1.213.292-2.25.033-0.784.098-1.465.098-3.15s-.065-2.366-.098-3.15c-.037-1.037-.137-1.725-.292-2.25-.156-.532-.362-0.94-.65-1.228-.288-.288-.696-.494-1.228-.65-.525-.155-1.213-.255-2.25-.292-0.784-.033-1.465-.098-3.15-.098zM8 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 1.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/>
+            </svg>
+            
+    
+                <!-- Twitter icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                    <path d="M5.492 15.945c5.39 0 8.34-4.466 8.34-8.34 0-.127 0-.253-.008-.38A5.951 5.951 0 0 0 16 4.33a5.824 5.824 0 0 1-1.657.464 2.98 2.98 0 0 0 1.294-1.642c-.568.338-1.2.583-1.866.715a2.964 2.964 0 0 0-5.044 2.696A8.415 8.415 0 0 1 1 3.2a2.953 2.953 0 0 0 .915 3.955A2.922 2.922 0 0 1 .572 6.24v.036a2.96 2.96 0 0 0 2.365 2.895 2.938 2.938 0 0 1-.812.112c-.198 0-.395-.01-.59-.045a2.963 2.963 0 0 0 2.755 2.063A5.92 5.92 0 0 1 0 13.074a8.357 8.357 0 0 0 4.492 1.316"></path>
+                </svg>
+    
+                <!-- YouTube icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                    <path d="M7.975.002C3.588-.05.044 3.22 0 7.606v.788c.044 4.386 3.588 7.655 7.975 7.607h.788c4.387-.05 7.932-3.32 7.976-7.706v-.788c-.044-4.386-3.588-7.655-7.975-7.607h-.788zM6.5 11.25V4.748l5.25 3.251-5.25 3.251z"></path>
+                </svg>
+    
+                <!-- Pinterest icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pinterest" viewBox="0 0 16 16">
+                  <path d="M8 0a8 8 0 0 1 8 8c0 4.418-3.582 8-8 8a7.978 7.978 0 0 1-3.74-.925c.407-1.155 1.04-2.647.117-3.768-.22-.42-1.337-.847-1.337-.847a5.345 5.345 0 0 0-1.097-.117c-.935 0-1.34.673-1.34 1.477 0 .9.653 2.015.962 3.124.09.356.53 1.702.758 2.373a1.07 1.07 0 0 1-.267 1.16c-.255.33-.77.546-1.367.546-1.117 0-1.977-.89-1.977-2.03 0-1.483 1.073-3.06 2.605-3.06 1.396 0 2.192 1.048 2.192 2.142 0 .427-.147.89-.332 1.24-.09.308.182.56.48.56.58 0 1.05-.62 1.05-1.504 0-1.12-.8-2.466-2.44-2.466-1.653 0-2.642 1.237-2.642 2.527 0 .92.296 1.54.296 1.54s-1.017 4.27-1.2 5.05c-.127.55-.036 1.22-.022 1.29a.675.675 0 0 0 .66.544c.314 0 .64-.416.64-.94 0-.82-1.203-2.32-1.203-3.13 0-1.6 1.173-3.106 3.38-3.106 1.784 0 3.14 1.308 3.14 3.042 0 1.96-1.102 3.422-2.68 3.422-.52 0-1.012-.284-1.183-.62 0 0-.284 1.077-.352 1.33-.13.44-.483.994-.88.994-.702 0-1.25-1.04-1.25-2.524 0-1.205.85-2.107 2.006-2.107 .938 0 1.654.7 1.654 1.547 0 1.165-.743 2.894-2.25 2.894 -.458 0-.82-.39-.705-.88 .135-.66 .317-1.374 .317-1.844"></path>
+              </svg>
+              
+              
+            </div>
+    
+            <div id="copyright" class="col-sm-12 col-md-4 col-lg-4 text-center">
+                &copy; Linkin Ahu
+            </div>
+    
+            <div id="privacy" class="col-sm-12 col-md-4 col-lg-4 text-end">
+                <p>Linkin Ahu</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+
+    <script src="js/Javascript.js">
+    </script>
+
+</html>
